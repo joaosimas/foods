@@ -1,13 +1,13 @@
-Dado(/^que eu acesse o endpoint \/bla bla bla$/) do
-  @response = HTTParty.get('http://blasfs.com.br/blaaaa')
+Dado(/^que eu acesse o endpoint \/search time windows$/) do
+  @response = HTTParty.get('http://dshasdjkajk.com.br/')
   puts "Quantidade existente de posts: " +@response.size.to_s
 end
 
 Quando(/^eu bater no endpoint$/) do
-  @response_id = HTTParty.get('http://blasfs.com.br/blaaaa/1')
+  @response_id = HTTParty.get('http://dshasdjkajk.com.br/search/time-windows')
 end
 
-Então(/^request com sucesso$/) do
+Então(/^irá me trazer o corpo da request com status de sucesso$/) do
   puts @response_id.body
   puts @response_id.message
   case @response_id.code
@@ -19,4 +19,3 @@ Então(/^request com sucesso$/) do
       puts "Xiiii #{response.code}"
   end
 end
-
