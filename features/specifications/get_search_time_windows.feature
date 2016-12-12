@@ -2,7 +2,7 @@
 
 Funcionalidade: foods
 
-Cenario: GET para trazer primeiras funcionalidades
+Cenario: GET para trazer janelas
 
 Dado que eu acesse o endpoint /search time windows
 Quando eu bater no endpoint
