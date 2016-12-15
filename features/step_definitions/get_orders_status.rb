@@ -1,13 +1,13 @@
-Dado(/^que eu acesse o endpoint \/orders routes$/) do
+Dado(/^que eu acesse o endpoint \/orders status$/) do
   @response = HTTParty.get('http://dshasdjkajk.com.br/')
   puts "Quantidade existente de rotas: " +@response.size.to_s
 end
 
-Quando(/^eu bater no endpoint de routes$/) do
-  @response_id = HTTParty.get('http://dshasdjkajk.com.br/orders/routes')
+Quando(/^eu bater no endpoint de status$/) do
+  @response_id = HTTParty.get('http://dshasdjkajk.com.br/orders/status')
 end
 
-Então(/^irá me trazer o corpo da request com status de sucesso da rota inteira$/) do
+Então(/^irá me trazer o corpo da request com status de sucesso apenas do status chamado$/) do
   puts @response_id.body
   puts @response_id.message
   case @response_id.code
