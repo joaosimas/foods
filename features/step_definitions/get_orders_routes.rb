@@ -1,10 +1,10 @@
-Dado(/^que eu acesse o endpoint \/search time windows$/) do
+Dado(/^que eu acesse o endpoint \/orders routes$/) do
   @response = HTTParty.get('http://dshasdjkajk.com.br/')
-  puts "Quantidade existente de posts: " +@response.size.to_s
+  puts "Quantidade existente de rotas: " +@response.size.to_s
 end
 
 Quando(/^eu bater no endpoint$/) do
-  @response_id = HTTParty.get('http://dshasdjkajk.com.br/search/time-windows')
+  @response_id = HTTParty.get('http://dshasdjkajk.com.br/orders/routes')
 end
 
 Então(/^irá me trazer o corpo da request com status de sucesso$/) do

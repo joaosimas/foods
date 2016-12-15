@@ -32,13 +32,13 @@ Quando(/^eu passar os parametros necessários com o verbo POST$/) do
       "limit":10
    }
 }.to_json
-  @create = HTTParty.post("http://dshasdjkajk.com.br/search/time-windows",
+  @create = HTTParty.post("http://dshasdjkajk.com.br/orders routes",
     :body => @createbody,
     :headers => {
       "Content-Type" => 'application/json'}
   )
 end
 
-Então(/^a janela será criada com sucesso$/) do
+Então(/^a rota será criada com sucesso$/) do
   puts @create.to_json, @create.message
 end
